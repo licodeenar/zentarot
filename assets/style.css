@@ -42,14 +42,24 @@ h1 {
 .card:first-child {
   margin-left: 0;
 }
-.card:hover,
 .card.hovered {
   margin-left: -35px !important;
   transform: translateY(5px);
   z-index: 10;
 }
-.card:first-child:hover {
-  margin-left: 0 !important; 
+.card:first-child.hovered {
+  margin-left: 0 !important;
+}
+
+@media (hover: hover) {
+  .card:hover {
+    margin-left: -35px !important;
+    transform: translateY(5px);
+    z-index: 10;
+  }
+  .card:first-child:hover {
+    margin-left: 0 !important;
+  }
 }
 
 /* 選択済みカード */
@@ -144,7 +154,6 @@ h1 {
     margin-left: -40px;
   }
 
-  .card:hover,
   .card.hovered {
     margin-left: -35px !important;
     transform: translateY(5px);
@@ -183,10 +192,3 @@ h1 {
   }
 }
 
-@media (hover: none) {
-  .card:hover {
-    margin-left: 0 !important;
-    transform: none !important;
-    z-index: auto !important;
-  }
-}
